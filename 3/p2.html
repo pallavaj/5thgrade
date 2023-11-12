@@ -1,0 +1,403 @@
+<!DOCTYPE>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Spelling Bee - Difficulty One BEE</title>
+    <link rel="stylesheet" href="/4thgrade/css/style.css" />
+    <script>
+        var spellingBee = [];
+        spellingBee[0] = ["laterigrade",
+"hyssop",
+"naumachia",
+"focaccia",
+"pahoehoe",
+"Kjeldahl",
+"rubefacient",
+"halcyon",
+"corrigenda",
+"Zanni",
+"nonage",
+"beurre",
+"jicama",
+"sturnine",
+"octonocular",
+"parallax",
+"antenatus",
+"trouvaille",
+"glazier",
+"kinesiology",
+"exogenous",
+"aniseikonia",
+"guayabera",
+"realgar",
+"anaphylaxis",
+"bobolink",
+"diluent",
+"urushiol",
+"andouille",
+"otiose",
+"megacephalic",
+"souchong",
+"poltroon",
+"Freudian",
+"floruit",
+"Bunyanesque",
+"exsect",
+"champignon",
+"bahuvrihi",
+"panjandrum",
+"catachresis",
+"tiffin",
+"colcannon",
+"tournedos",
+"ormolu",
+"blottesque",
+"consommé",
+"ullage",
+"zortzico",
+"teratism",
+"flagellum",
+"panegyric",
+"hoi polloi",
+"sirenian",
+"nescience",
+"blatherskite",
+"consigliere",
+"adiabatic",
+"camembert",
+"ecchymosis",
+"oppidan",
+"decastich",
+"Naugahyde",
+"lefse",
+"beccafico",
+"amphistylar",
+"saturnine",
+"zaibatsu",
+"titian",
+"tokonoma",
+"unguiculate",
+"amaryllis",
+"reveille",
+"regnal",
+"attaché",
+
+        ];
+        spellingBee[1] = ["rafflesia",
+"ranunculus",
+"pistou",
+"scintillation",
+"Bolognese",
+"farrago",
+"coup de grace",
+"tourelle",
+"notturno",
+"ginglymus",
+"hemorrhage",
+"tapetum",
+"golem",
+"krewe",
+"toque",
+"avuncular",
+"habiliments",
+"rubato",
+"gentilitial",
+"obnebulate",
+"allonym",
+"croquembouche",
+"kobold",
+"mendicity",
+"castellated",
+"toponymic",
+"boudin",
+"bucatini",
+"reboation",
+"haupia",
+"Keplerian",
+"codswallop",
+"hauteur",
+"camarilla",
+"camarilla",
+"nidicolous",
+"oxyacetylene",
+"Humboldt",
+"hellebore",
+"transhumance",
+"phloem",
+"lacustrine",
+"ageusia",
+"pillor",
+"deleterious",
+"ikat",
+"pylorus",
+"erythroblast",
+"maillot",
+"epenthesis",
+"hinoki",
+"nonpareil",
+"nyctinasty",
+"pointelle",
+"vinaigrette",
+"tinnient",
+"aioli",
+"pochoir",
+"glyceraldehyde",
+"hagiographer",
+"syncope",
+"icosahedron",
+"goanna",
+"wassail",
+"ammonite",
+"tanager",
+"pneumatocyst",
+"fortissimo",
+"portmanteau",
+"coaxation",
+"ardoise",
+"farouche",
+"farfalle",
+"ogival",
+"stretto",
+
+        ];
+        spellingBee[2] = ["coccygeal",
+"Strelitzia",
+"tachyon",
+"piccata",
+"isagoge",
+"élan",
+"breviloquence",
+"kalimba",
+"illative",
+"betony",
+"bêtise",
+"transience",
+"frison",
+"flavedo",
+"maquillage",
+"mortadella",
+"stanchion",
+"spirulina",
+"eleemosynary",
+"force majeure",
+"ossicle",
+"anemone",
+"alpargata",
+"disembogue",
+"luculent",
+"expatiate",
+"xerogel",
+"vizierial",
+"crescive",
+"tryptophan",
+"neophyte",
+"buffa",
+"clavichord",
+"de rigueur",
+"secant",
+"comanchero",
+"meiosis",
+"gules",
+"nimiety",
+"lokelani",
+"psoriasis",
+"bavardage",
+"coulibiac",
+"xyloglyphy",
+"Aramaic",
+"anathema",
+"basilica",
+"rajpramukh",
+"Chalcolithic",
+"rinceau",
+"filar",
+"bhangra",
+"risorgimento",
+"agalma",
+"analgesia",
+"dengue",
+"cantatrice",
+"emollient",
+"parquet",
+"dhurrie",
+"lapidary",
+"cachexia",
+"connoisseur",
+"ferruginous",
+"gendarme",
+"demulcent",
+"goosander",
+"kwashiorkor",
+"lecithin",
+"cetology",
+"plenipotentiary",
+"foudroyant",
+"sesquipedalian",
+"expugnable",
+"profligacy",
+
+        ];
+        spellingBee[3] = ["yosenabe",
+"funori",
+"piloncillo",
+"xiphias",
+"étouffée",
+"degauss",
+"tussock",
+"lanolated",
+"linnet",
+"embouchure",
+"plangency",
+"apocryphal",
+"tamarack",
+"puerilely",
+"obloquy",
+"dhole",
+"Sangamon",
+"outré",
+"ululate",
+"sororal",
+"epideictic",
+"embolus",
+"caveola",
+"farina",
+"heuristic",
+"nudibranch",
+"triquetra",
+"paramahamsa",
+"duello",
+"fjeld",
+"tomography",
+"effleurage",
+"chastushka",
+"bergère",
+"Erewhonian",
+"rhyton",
+"orogeny",
+"Pepysian",
+"esplanade",
+"gesellschaft",
+"tamari",
+"arenaceous",
+"panettone",
+"tmesis",
+"clerihew",
+"tsukupin",
+"katakana",
+"Parmentier",
+"rugose",
+"brume",
+"hiortdahlite",
+"extravasate",
+"incunabula",
+"cordillera",
+"zazen",
+"cabochon",
+"après",
+"zydeco",
+"consanguine",
+"bibimbap",
+"aquiclude",
+"demitasse",
+"tomalley",
+"bouffant",
+"bas-relief",
+"rhizome",
+"Wensleydale",
+"erubescent",
+"estovers",
+"rembrandt",
+"marcel",
+"croquignole",
+"dolmen",
+"griot",
+"vexillologist",
+
+        ];
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="history" id="history">
+
+        </div>
+        <div class="spelling_container">
+            <div class="subpages">
+                <ul class="subpageslist">
+                    <li class="subpageslinks refresh"><a onclick="resetStorageAll()" href="javascript:void(0)">Refresh All</a></li>
+<li class="subpageslinks"><a href="/4thgrade/word.html" >Easy</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/1/">Difficulty One</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/">Difficulty Two</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p2.html">Difficulty Two - Continue</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p3.html">Difficulty Two - End</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/">Difficulty Three</a></li>
+                    <li class="subpageslinks active"><a>Difficulty Three - Continue</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/p3.html">Difficulty Two - End</a></li>
+                </ul>
+            </div>
+            <select id="chooseLesson" onchange="setRetestWords()">
+                <option value=0> Page 1</option>
+                <option value=1> Page 2</option>
+                <option value=2> Page 3</option>
+                <option value=3> Page 4</option>
+                <option value=4> Retest words</option>
+            </select>
+            <div class="wordContainer">
+                <span id="spellingBee" onclick="getWordDefinitions()">Welcome</span>
+            </div>
+            <div id="_definitions_">
+            </div>
+            <button class="btn-next" id="btn-next" onclick="readAWord()">Next word</button>
+            <button class="btn-repeat" id="btn-repeat" onclick="repeatWord()"> Repeat</button>
+            <button class="btn-repeat" id="btn-add-retest" onclick="addRemoveRetest(0)">Add to Retest</button>
+            <button class="btn-repeat" id="btn-remove-retest" onclick="addRemoveRetest(-1)">Remove from Retest</button>
+            <div class="remainingWords"> Remaining Words : <span class="_count_" id="_count_">Not Available</span></div>
+            <div class="spelling-container">
+                <div>
+                    <h2>Page 1</h2>
+                    <div id="spellingList0">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 2</h2>
+                    <div id="spellingList1">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 3</h2>
+                    <div id="spellingList2">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 4</h2>
+                    <div id="spellingList3">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Retest </h2>
+                    <div id="spellingList4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/4thgrade/js/main.js"></script>
+    <script src="/4thgrade/js/app.js"></script>
+    <script>
+        setRetestWords();
+        printSpellingList(0);
+        printSpellingList(1);
+        printSpellingList(2);
+        printSpellingList(3);
+        printSpellingList(4);
+    </script>
+</body>
+</html>

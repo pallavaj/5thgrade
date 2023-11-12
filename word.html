@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Spelling Bee Test</title>
+    <link rel="stylesheet" href="/4thgrade/css/style.css" /> 
+    <script>
+        var spellingBee = [];
+        spellingBee[0] = [
+        "Confident",
+"Vision",
+"Diamond",
+"Stitchery",
+"Fiddlehead",
+"Hobbit",
+"Doughnut",
+"Precious",
+"Wafting",
+"Occupy",
+"Afrobeat",
+"Termite",
+"Insulation",
+"Intertwine",
+"Recital",
+"Furniture",
+"Ambush",
+"Squire",
+"Submerged",
+"Saucer",
+"Gloaming",
+"Engulf",
+"Graduate",
+"Fascinated",
+"Composition",
+"Wisdom",
+"Ourselves",
+"Invisible",
+"Completely",
+"Poisonous",
+"Intimidate",
+"Drawers",
+"Disdain",
+"Deliberately",
+"Spacious",
+"Forearms",
+"Gratitude",
+"Appreciation",
+"Devotion",
+"Inscription",
+"Inventory",
+"Wheezy",
+"Possible",
+"Replace",
+"Crookedly",
+"Fragrant",
+"Fowl",
+"Responsible",
+"Awfully",
+"Manual",
+        ];
+
+        spellingBee[1] = [
+            
+        ];
+
+        spellingBee[2] = [
+            
+        ];
+
+        spellingBee[3] = [
+           
+        ]
+
+        spellingBee[4] = [
+           
+        ]
+
+        // var mymessage = "Welcome"
+
+        // var endMsg = "Awesome! No words remaining"
+
+        // var msg = new SpeechSynthesisUtterance();
+        // const synth = window.speechSynthesis;
+        // const voices = synth.getVoices();
+
+        // function readAWord() {
+        //     var lessonChoosen = document.querySelector("#chooseLesson").value;
+        //     if (spellingBee[lessonChoosen].length) {
+        //         msg.text = spellingBee[lessonChoosen].splice(spellingBee[lessonChoosen].length * Math.random() | 0, 1)[
+        //             0];
+        //         var mylabel = document.getElementById("spellingBee");
+
+        //     } else {
+        //         //document.getElementById("btn-next").setAttribute("data-disabled","disabled")
+        //         msg.text = endMsg;
+        //     }
+        //     mymessage = msg.text;
+        //     var mylabel = document.getElementById("spellingBee");
+        //     mylabel.innerText = msg.text;
+        //     console.log(msg.text);
+        //     window.speechSynthesis.speak(msg);
+
+        //     if (msg.text !== endMsg) {
+        //         var anchor = document.createElement("a");
+        //         anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+        //         anchor.setAttribute('class', 'speakWord');
+        //         anchor.innerText = msg.text;
+        //         anchor.href = "javascript:void(0)";
+        //         document.getElementById("history").prepend(anchor);
+        //     }
+
+        // }
+
+        // function repeatWord() {
+        //     msg.text = mymessage;
+        //     window.speechSynthesis.speak(msg);
+        // }
+        // /**
+        //  * task = null, 0 //Add
+        //  * task = -1, // remove
+        //  * **/
+        // function addRemoveRetest(task) {
+        //     let retestWordsStorage = localStorage.getItem("retestWords");
+        //     let retestWords = [];
+        //     try {
+        //         retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+        //     } catch (error) {
+        //         retestWords = [];
+        //     }
+
+        //     let currentIndex = retestWords.indexOf(msg.text)
+
+        //     if (task != '-1' && task != -1) {
+        //         if (currentIndex == -1 && msg.text != endMsg) {
+        //             retestWords.push(msg.text)
+        //         }
+        //     } else {
+        //         if (currentIndex != -1) {
+        //             retestWords.splice(currentIndex, 1);
+        //         }
+        //     }
+        //     localStorage.setItem("retestWords", JSON.stringify(retestWords));
+        //     setRetestWords();
+        //     printSpellingList(5);
+        //     //spellingBee[4] = retestWords;
+        // }
+
+        // function setRetestWords() {
+        //     let retestWordsStorage = localStorage.getItem("retestWords");
+        //     let retestWords = [];
+        //     try {
+        //         retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+        //     } catch (error) {
+        //         retestWords = [];
+        //     }
+        //     spellingBee[5] = retestWords;
+        // }
+
+        // function printSpellingList(idx) {
+        //     var divElem = document.createElement('div');
+        //     spellingBee[idx].sort();
+        //     for (var i = 0; i < spellingBee[idx].length; i++) {
+        //         var anchor = document.createElement("a");
+        //         anchor.setAttribute('onclick', 'speakLoud("' + spellingBee[idx][i] + '")');
+        //         anchor.setAttribute('class', 'speakWord');
+        //         anchor.innerText = spellingBee[idx][i];
+        //         anchor.href = "javascript:void(0)";
+
+        //         divElem.appendChild(anchor);
+        //     }
+        //     var spellingLists = document.getElementById("spellingList" + idx);
+        //     spellingLists.replaceChildren();
+        //     spellingLists.appendChild(divElem);
+        // }
+
+        // function speakLoud(txtmsg) {
+        //     msg.text = txtmsg;
+        //     var mylabel = document.getElementById("spellingBee");
+        //     mylabel.innerText = msg.text;
+        //     window.speechSynthesis.speak(msg);
+        //     if (msg.text !== endMsg) {
+        //         var anchor = document.createElement("a");
+        //         anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+        //         anchor.setAttribute('class', 'speakWord');
+        //         anchor.innerText = msg.text;
+        //         anchor.href = "javascript:void(0)";
+        //         document.getElementById("history").prepend(anchor);
+        //     }
+        // }
+
+
+ 
+   </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="history" id="history">
+
+        </div>
+        <div class="spelling_container">
+            <div class="subpages">
+                <ul class="subpageslist">
+                    <li class="subpageslinks active">Easy</li>
+                    <li class="subpageslinks"><a href="/4thgrade/1/">Difficulty One</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/">Difficulty Two</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p2.html">Difficulty Two - Continue</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p3.html">Difficulty Two - End</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/">Difficulty Three</a></li>
+                </ul>
+            </div>
+            <select id="chooseLesson" onchange="setRetestWords()">
+                <option value=0> First 80 words</option>
+                <option value=1> Second 100 words</option>
+                <option value=2> Third 100 words</option>
+                <option value=3> Fourth 100 words</option>
+                <option value=4> Remaining words</option>
+                <option value=5> Retest words</option>
+            </select>
+            <div class="wordContainer">
+    <span id="spellingBee" onclick="getWordDefinitions()">Welcome</span>
+</div>
+            <div id="_definitions_">
+
+            </div>
+            <button class="btn-next" id="btn-next" onclick="readAWord()">Next word</button>
+            <button class="btn-repeat" id="btn-repeat" onclick="repeatWord()"> Repeat</button>
+            <button class="btn-repeat" id="btn-add-retest" onclick="addRemoveRetest(0)">Add to Retest</button>
+            <button class="btn-repeat" id="btn-remove-retest" onclick="addRemoveRetest(-1)">Remove from Retest</button>
+            <div class="remainingWords"> Remaining Words : <span class="_count_" id="_count_">Not Available</span></div>
+            <div class="spelling-container">
+                <div>
+                    <h2>0 - 80</h2>
+                    <div id="spellingList0">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>81 - 180</h2>
+                    <div id="spellingList1">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>181 - 280 </h2>
+                    <div id="spellingList2">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>281 - 380 </h2>
+                    <div id="spellingList3">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>381 - end </h2>
+                    <div id="spellingList4">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Retest </h2>
+                    <div id="spellingList5">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="/4thgrade/js/main.js" ></script> -->
+    <script>
+       let mymessage = "Welcome"
+
+let endMsg = "Awesome! No words remaining"
+let voiceSelect = document.createElement("select");
+voiceSelect.setAttribute('id', 'voiceSelect');
+let subpages = document.querySelector('.subpages');
+    subpages.before(voiceSelect);
+
+let msg = new SpeechSynthesisUtterance();
+const synth = window.speechSynthesis;
+let voices = synth.getVoices();
+console.log(voices);
+if(voices.length){
+    for (let i = 0; i < voices.length; i++) {
+        const option = document.createElement('option');
+        option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    
+        if (voices[i].default) {
+          option.textContent += ' — DEFAULT';
+        }
+    
+        option.setAttribute('data-lang', voices[i].lang);
+        option.setAttribute('data-name', voices[i].name);
+        document.getElementById("voiceSelect").appendChild(option);
+      }
+}else{
+synth.onvoiceschanged = function() {
+    voices = synth.getVoices();
+    console.log(voices);
+    for (let i = 0; i < voices.length; i++) {
+        const option = document.createElement('option');
+        option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    
+        if (voices[i].default) {
+          option.textContent += ' — DEFAULT';
+        }
+    
+        option.setAttribute('data-lang', voices[i].lang);
+        option.setAttribute('data-name', voices[i].name);
+        document.getElementById("voiceSelect").appendChild(option);
+      }
+
+};
+}
+
+//<select id="voiceSelect"></select>
+
+
+function readAWord() {
+    let lessonChoosen = document.querySelector("#chooseLesson").value;
+
+    if(lessonChoosen != "5"){
+        //Read from local storage and update array
+        let spellingWords = localStorage.getItem("spellingBee_"+lessonChoosen);
+        try {
+            spellingBee[lessonChoosen] = spellingWords ? JSON.parse(spellingWords) : spellingBee[lessonChoosen];
+        } catch (error) {
+            console.log("Not found");
+        }
+    }
+    //complete read from local storage
+
+    if (spellingBee[lessonChoosen].length) {
+        msg.text = spellingBee[lessonChoosen].splice(spellingBee[lessonChoosen].length * Math.random() | 0, 1)[
+            0];
+    } else {
+        //document.getElementById("btn-next").setAttribute("data-disabled","disabled")
+        msg.text = endMsg;
+    }
+    if(lessonChoosen != "5"){
+        //Write to local storage
+        localStorage.setItem("spellingBee_"+lessonChoosen, JSON.stringify(spellingBee[lessonChoosen]));
+    }
+    mymessage = msg.text;
+    let mylabel = document.getElementById("spellingBee");
+    mylabel.innerText = msg.text;
+    addhelpLinks(mylabel,msg.text)
+
+    //Voice selection
+    let selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    console.log(selectedOption);
+    //msg.voice = voices.find((v) => v.name === selectedOption);
+    //Voice selection end
+
+    window.speechSynthesis.speak(msg);
+
+    if (msg.text !== endMsg) {
+        let anchor = document.createElement("a");
+        anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+        anchor.setAttribute('class', 'speakWord');
+        anchor.innerText = msg.text;
+        anchor.href = "javascript:void(0)";
+        document.getElementById("history").prepend(anchor);
+    }
+    try {
+        let definition = document.getElementById('_definitions_');
+        definition.innerHTML = '';
+        let count = document.getElementById('_count_');
+        if(count)count.innerHTML = spellingBee[lessonChoosen].length;
+    } catch (error) {
+        
+    }
+    
+}
+
+function repeatWord() {
+    msg.text = mymessage;
+    //Voice selection
+    let selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    console.log(selectedOption);
+    //msg.voice = voices.find((v) => v.name === selectedOption);
+    //Voice selection end
+    window.speechSynthesis.speak(msg);
+}
+function readSpelling(){
+    let a = mymessage.split("");
+    let b = a.toString()
+    let c = b.replaceAll(",", ", ");
+    msg.text = c;
+    window.speechSynthesis.speak(msg);
+
+}
+/**
+ * task = null, 0 //Add
+ * task = -1, // remove
+ * **/
+function addRemoveRetest(task) {
+    let retestWordsStorage = localStorage.getItem("retestWords");
+    let retestWords = [];
+    try {
+        retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+    } catch (error) {
+        retestWords = [];
+    }
+
+    let currentIndex = retestWords.indexOf(msg.text)
+
+    if (task != '-1' && task != -1) {
+        if (currentIndex == -1 && msg.text != endMsg) {
+            retestWords.push(msg.text)
+        }
+    } else {
+        if (currentIndex != -1) {
+            retestWords.splice(currentIndex, 1);
+        }
+    }
+    localStorage.setItem("retestWords", JSON.stringify(retestWords));
+    setRetestWords();
+    printSpellingList(5);
+    
+}
+
+function setRetestWords() {
+    let retestWordsStorage = localStorage.getItem("retestWords");
+    let retestWords = [];
+    try {
+        retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+    } catch (error) {
+        retestWords = [];
+    }
+    spellingBee[5] = retestWords;
+}
+
+function printSpellingList(idx) {
+    let divElem = document.createElement('div');
+    spellingBee[idx].sort();
+
+    let reset_anchor = document.createElement("a");
+    reset_anchor.setAttribute('onclick', 'resetStorage("' + idx + '")');
+    reset_anchor.setAttribute('class', 'resetWordList');
+    reset_anchor.innerText = "Refresh "+(idx+1);
+    reset_anchor.href = "javascript:void(0)";
+    divElem.appendChild(reset_anchor);
+
+    for (let i = 0; i < spellingBee[idx].length; i++) {
+        let anchor = document.createElement("a");
+        anchor.setAttribute('onclick', 'speakLoud("' + spellingBee[idx][i] + '")');
+        anchor.setAttribute('class', 'speakWord');
+        anchor.innerText = spellingBee[idx][i];
+        anchor.href = "javascript:void(0)";
+
+        divElem.appendChild(anchor);
+    }
+    let spellingLists = document.getElementById("spellingList" + idx);
+    spellingLists.replaceChildren();
+    spellingLists.appendChild(divElem);
+}
+function resetStorage(idx){
+    localStorage.removeItem("spellingBee_"+idx);
+    window.location.reload();
+}
+function resetStorageAll(){
+    try {
+        localStorage.removeItem("spellingBee_0");
+        localStorage.removeItem("spellingBee_1");
+        localStorage.removeItem("spellingBee_2");
+        localStorage.removeItem("spellingBee_3");
+        localStorage.removeItem("spellingBee_4");
+        window.location.reload();
+    } catch (error) {
+        window.location.reload();
+    }
+
+}
+
+
+function speakLoud(txtmsg) {
+    msg.text = txtmsg;
+    let mylabel = document.getElementById("spellingBee");
+    mylabel.innerText = msg.text;
+    addhelpLinks(mylabel, msg.text)
+
+    //Voice selection
+    let selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    console.log(selectedOption);
+    //msg.voice = voices.find((v) => v.name === selectedOption);
+    //Voice selection end
+
+
+    window.speechSynthesis.speak(msg);
+    if (msg.text !== endMsg) {
+        let anchor = document.createElement("a");
+        anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+        anchor.setAttribute('class', 'speakWord');
+        anchor.innerText = msg.text;
+        anchor.href = "javascript:void(0)";
+        document.getElementById("history").prepend(anchor);
+    }
+    try {
+        let definition = document.getElementById('_definitions_');
+        definition.innerHTML = '';
+    
+    } catch (error) {
+        
+    }
+}
+function addhelpLinks(mylabel, txt){
+    let mw_link =  document.getElementById("mw_link");
+    let google_link =  document.getElementById("google_link");
+    if(google_link == null){
+        google_link = document.createElement("a")
+        google_link.setAttribute('id', 'google_link');
+        mylabel.after(google_link);     
+    }
+    if(mw_link == null){
+        mw_link = document.createElement("a")
+        mw_link.setAttribute('id', 'mw_link');
+        mylabel.after(mw_link);
+    }
+    google_link.setAttribute('href', 'https://www.google.com/search?q='+encodeURI(txt))
+    google_link.setAttribute('target', '_blank');
+    google_link.innerText = "Google Search";
+
+    mw_link.setAttribute('href', 'https://www.merriam-webster.com/dictionary/'+encodeURI(txt))
+    mw_link.setAttribute('target', '_blank');
+    mw_link.innerText = "Dictionary";
+}
+
+
+        </script>
+    <script src="/4thgrade/js/app.js" ></script>
+    <script>
+        setRetestWords();
+        printSpellingList(0);
+        printSpellingList(1);
+        printSpellingList(2);
+        printSpellingList(3);
+        printSpellingList(4);
+        printSpellingList(5);
+    </script>
+</body>
+</html>

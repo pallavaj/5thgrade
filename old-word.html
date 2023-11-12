@@ -1,0 +1,643 @@
+<!DOCTYPE>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Spelling Bee Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .spelling_container {
+            text-align: center;
+            padding-top: 8vh;
+        }
+
+        #spellingBee {
+            font-size: 10vh;
+            color: blue;
+        }
+
+        button {
+            font-size: 4vh;
+            border-radius: 5px;
+            font-family: cursive;
+            padding: 0 2vh;
+            margin: 0 2vh;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px #999;
+        }
+
+        button[data-disabled] {
+            background-color: grey;
+        }
+
+        .btn-next {
+            border-color: #04AA6D;
+            color: green;
+        }
+
+        .btn-next:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Blue */
+        .btn-repeat {
+            border-color: #2196F3;
+            color: dodgerblue;
+        }
+
+        .btn-repeat:hover {
+            background: #2196F3;
+            color: white;
+        }
+
+        .spelling-container {
+            display: flex;
+            justify-content: center;
+            gap: 1vw;
+        }
+
+        #chooseLesson {
+            font-size: 2vh;
+            border-radius: 8px;
+            padding: 4px 10px;
+        }
+
+        a.speakWord {
+            display: block;
+        }
+    </style>
+    <script>
+        var spellingBee = [];
+        spellingBee[0] = [
+            "Some",
+            "What",
+            "few",
+            "pail",
+            "Area",
+            "Story",
+            "Sheesh",
+            "sole",
+            "files",
+            "wiggle",
+            "baggy",
+            "phone",
+            "blame",
+            "skipped",
+            "crafty",
+            "scars",
+            "table",
+            "roots",
+            "stinky",
+            "only",
+            "Bones",
+            "marry",
+            "swept",
+            "chunks",
+            "forget",
+            "rare",
+            "feedback",
+            "scared",
+            "lousy",
+            "coop",
+            "during",
+            "faith",
+            "bandmates",
+            "quiet",
+            "minute",
+            "streak",
+            "freedom",
+            "stuttered",
+            "fudge",
+            "damaged",
+            "Frantic",
+            "Clash",
+            "Funky",
+            "Tower",
+            "Swoop",
+            "Greasy",
+            "Gravy",
+            "Display",
+            "Growling",
+            "Visit",
+            "Blessings",
+            "Peacock",
+            "Ohio",
+            "Elves",
+            "uplift",
+            "Everyone",
+            "Another",
+            "Beetle",
+            "Sights",
+            "Choose",
+            "Wonder",
+            "Belongs",
+            "Model",
+            "Fasting",
+            "Until",
+            "Nobody",
+            "Color",
+            "Colour",
+            "Heavy",
+            "Build",
+            "Greeting",
+            "Comic",
+            "Awesome",
+            "Wi-Fi",
+            "Glide",
+            "Spading",
+            "Sifting",
+            "Railings",
+            "Pitch-black",
+            "Jinx",
+            "Hummingbird",
+            "Hauling",
+            "Nimble",
+            "Slippery",
+            "Hitched",
+            "Tingle",
+            "Ebb",
+            "Chase",
+            "Doodled",
+            "Everlasting",
+            "Snooty",
+            "Innings",
+            "Upbeat",
+            "Trout",
+            "Joggled",
+            "Waist",
+            "Landline",
+            "Sparrow",
+            "Whizzed", "Weave"
+        ];
+
+        spellingBee[1] = [
+            "Slivers",
+            "Spellbound",
+            "Former",
+            "Cottonwood",
+            "Bossiness",
+            "Blotch",
+            "Easily",
+            "Skidded",
+            "Overseas",
+            "Sheepish",
+            "Gloomy",
+            "Inkling",
+            "Interesting",
+            "Beginning",
+            "Slouch",
+            "Foster",
+            "Smirk",
+            "Discarded",
+            "Rental",
+            "People",
+            "Saints",
+            "Purchase",
+            "Shrivel",
+            "Limbering",
+            "Sockets",
+            "Squinched",
+            "Orca",
+            "Newt",
+            "Camel",
+            "spick-and-span",
+            "Arrows",
+            "Tomorrow",
+            "Distracted",
+            "Balance",
+            "Probably",
+            "Pottery",
+            "Beyond",
+            "Twelve",
+            "Respond",
+            "Grimy",
+            "Arrive",
+            "Archers",
+            "Slather",
+            "Compute",
+            "Switcheroo",
+            "Donkeys",
+            "Disband",
+            "Constant",
+            "Balm",
+            "Traditional",
+            "Bandage",
+            "Floral",
+            "Bruise",
+            "Astride",
+            "Actually",
+            "Decide",
+            "Exciting",
+            "Smooshed",
+            "Shawl",
+            "Murals",
+            "Casa",
+            "Kneeling",
+            "Potion",
+            "Devoured",
+            "Riffled",
+            "Adorable",
+            "Section",
+            "Puttering",
+            "Python",
+            "Apartment",
+            "Yurt",
+            "Bovines",
+            "Rituals",
+            "Andean",
+            "Scrawled",
+            "Arrested",
+            "Oftentimes",
+            "Embrace",
+            "Ceiling",
+            "Adaptable",
+            "Alternate",
+            "Chicago",
+            "Observations",
+            "Benefited",
+            "Benefitted",
+            "Pistons",
+            "Pangs",
+            "Abodes",
+            "Declaration",
+            "Soldiers",
+            "Cronies",
+            "Peevish",
+            "Dredged",
+            "Navajo",
+            "Adjusted",
+            "Temperature",
+            "Poppet",
+            "Intertribal",
+            "Angola", "Contours"
+        ];
+
+        spellingBee[2] = [
+            "Republic",
+            "Paradise",
+            "Vertical",
+            "Equipment",
+            "Debit",
+            "Minerals",
+            "Container",
+            "Economy",
+            "Wrestle",
+            "overtly",
+            "Innocent",
+            "Tallyho",
+            "Reservation",
+            "Flybys",
+            "Inlet",
+            "Pandemic",
+            "Doorjamb",
+            "Torment",
+            "Evaded",
+            "Instead",
+            "Potential",
+            "Alberta",
+            "Hematology",
+            "Efficient",
+            "Unacknowledged",
+            "Brooding",
+            "Pioneered",
+            "Sedan",
+            "Menacing",
+            "Tiara",
+            "Homeopathic",
+            "Exhilaration",
+            "Feisty",
+            "Configuration",
+            "Ruckus",
+            "Dissolute",
+            "Confiscated",
+            "Enamel",
+            "Retribution",
+            "Aggravate",
+            "Acrid",
+            "Ballast",
+            "Encompass",
+            "Ordained",
+            "Dais",
+            "Serum",
+            "Batten",
+            "Ambient",
+            "Geopolitics",
+            "Broached",
+            "Appendages",
+            "Tenets",
+            "Seminary",
+            "Counterfeit",
+            "Antidote",
+            "Pomade",
+            "Manhattan",
+            "Humbug ",
+            "Embossed",
+            "Smite",
+            "Provocation",
+            "Crevices",
+            "Maniacal",
+            "Defunct",
+            "Deviation",
+            "Reenactment",
+            "Offhandedly",
+            "Churned",
+            "Mutiny",
+            "Apex",
+            "Subsidence",
+            "Effigy",
+            "Vestments",
+            "Lithuania",
+            "Azores",
+            "Tankard",
+            "Starboard",
+            "Maneuverable",
+            "Lurid",
+            "Blasphemous",
+            "Chemotherapy",
+            "Proscribed",
+            "Emigrate",
+            "Zimbabwe",
+            "Impudence",
+            "Oncologist",
+            "Inaudible",
+            "Telenovelas",
+            "Mullioned",
+            "Benighted",
+            "Philology",
+            "Prophetically",
+            "Cul-de-sac",
+            "Pell-Mell ",
+            "Sanskrit",
+            "parathas",
+            "Rejoinder",
+            "Preternaturally",
+            "Canid",
+            "Forsooth"
+        ]
+
+        spellingBee[3] = [
+            "Masa",
+            "Leander",
+            "Pneumonia",
+            "Subservient",
+            "Mercenary",
+            "Trey ",
+            "Urchins",
+            "Xylem",
+            "Fumatorium",
+            "Deign",
+            "Catastrophe",
+            "Infrared",
+            "Mausoleum",
+            "Incontrovertible",
+            "Assimilation",
+            "Conjugate",
+            "Commemoration",
+            "Conifers",
+            "Beijing",
+            "Architrave",
+            "Andromeda",
+            "Spandau",
+            "Estampies",
+            "Penelope",
+            "Roulette",
+            "Lustrum",
+            "Arcturus",
+            "Hobbledehoy",
+            "Eurythmics",
+            "Miscellaneous",
+            "Sackbuts",
+            "Tilapia",
+            "Caparisoned",
+            "Doppelgänger",
+            "Piraeus",
+            "Misericords",
+            "Misericordes",
+            "Aye-aye",
+            "Trilby",
+            "Jicarilla",
+            "Thurible",
+            "Vesuvian",
+            "Saltarellos",
+            "Chatelaine",
+            "Cuirass",
+            "Chachalacas",
+            "Urad",
+            "Hurdy-Gurdy",
+            "Alhambra",
+            "Kumkum",
+            "Kirpan",
+            "Biryani",
+            "Sikhism",
+            "Cirrhosis",
+            "Bangalore",
+            "Cirque",
+            "Cirque",
+            "Nom de plume",
+            "Undine",
+            "Marguerite",
+            "Tamil",
+            "Garderobe",
+            "Cherisy",
+            "Nares",
+            "Andalusian",
+            "Carillon",
+            "Cortège",
+            "Gaels",
+            "Fado",
+            "Atheneum",
+            "Ayurvedic",
+            "Chiasmus",
+            "Camelot"
+        ]
+
+        var mymessage = "Welcome"
+
+        var endMsg = "Awesome! No words remaining"
+
+        var msg = new SpeechSynthesisUtterance();
+        const synth = window.speechSynthesis;
+        const voices = synth.getVoices();
+
+        function readAWord() {
+            var lessonChoosen = document.querySelector("#chooseLesson").value;
+            if (spellingBee[lessonChoosen].length) {
+                msg.text = spellingBee[lessonChoosen].splice(spellingBee[lessonChoosen].length * Math.random() | 0, 1)[
+                    0];
+                var mylabel = document.getElementById("spellingBee");
+
+            } else {
+                //document.getElementById("btn-next").setAttribute("data-disabled","disabled")
+                msg.text = endMsg;
+            }
+            mymessage = msg.text;
+            var mylabel = document.getElementById("spellingBee");
+            mylabel.innerText = msg.text;
+            console.log(msg.text);
+            window.speechSynthesis.speak(msg);
+
+            if(msg.text !== endMsg){
+                var anchor = document.createElement("a");
+                anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+                anchor.setAttribute('class', 'speakWord');
+                anchor.innerText = msg.text;
+                anchor.href = "javascript:void(0)";
+                document.getElementById("history").prepend(anchor);
+            }
+
+        }
+
+        function repeatWord() {
+            msg.text = mymessage;
+            window.speechSynthesis.speak(msg);
+        }
+        /**
+         * task = null, 0 //Add
+         * task = -1, // remove
+         * **/
+        function addRemoveRetest(task) {
+            let retestWordsStorage = localStorage.getItem("retestWords");
+            let retestWords = [];
+            try {
+                retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+            } catch (error) {
+                retestWords = [];
+            }
+
+            let currentIndex = retestWords.indexOf(msg.text)
+
+            if (task != '-1' && task != -1) {
+                if (currentIndex == -1 && msg.text != endMsg) {
+                    retestWords.push(msg.text)
+                }
+            } else {
+                if (currentIndex != -1) {
+                    retestWords.splice(currentIndex, 1);
+                }
+            }
+            localStorage.setItem("retestWords", JSON.stringify(retestWords));
+            setRetestWords();
+            printSpellingList(4);
+            //spellingBee[4] = retestWords;
+        }
+
+        function setRetestWords() {
+            let retestWordsStorage = localStorage.getItem("retestWords");
+            let retestWords = [];
+            try {
+                retestWords = retestWordsStorage ? JSON.parse(retestWordsStorage) : [];
+            } catch (error) {
+                retestWords = [];
+            }
+            spellingBee[4] = retestWords;
+        }
+
+        function printSpellingList(idx) {
+            var divElem = document.createElement('div');
+            spellingBee[idx].sort();
+            for (var i = 0; i < spellingBee[idx].length; i++) {
+                var anchor = document.createElement("a");
+                anchor.setAttribute('onclick', 'speakLoud("' + spellingBee[idx][i] + '")');
+                anchor.setAttribute('class', 'speakWord');
+                anchor.innerText = spellingBee[idx][i];
+                anchor.href = "javascript:void(0)";
+
+                divElem.appendChild(anchor);
+            }
+            var spellingLists = document.getElementById("spellingList" + idx);
+            spellingLists.replaceChildren();
+            spellingLists.appendChild(divElem);
+        }
+
+        function speakLoud(txtmsg) {
+            msg.text = txtmsg;
+            var mylabel = document.getElementById("spellingBee");
+            mylabel.innerText = msg.text;
+            window.speechSynthesis.speak(msg);
+            if(msg.text !== endMsg){
+                var anchor = document.createElement("a");
+                anchor.setAttribute('onclick', 'speakLoud("' + msg.text + '")');
+                anchor.setAttribute('class', 'speakWord');
+                anchor.innerText = msg.text;
+                anchor.href = "javascript:void(0)";
+                document.getElementById("history").prepend(anchor);
+            }            
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="history" id="history">
+
+        </div>
+        <div class="spelling_container">
+            <select id="chooseLesson" onchange="setRetestWords()">
+                <option value=0> First 100 words</option>
+                <option value=1> Second 100 words</option>
+                <option value=2> Third 100 words</option>
+                <option value=3> Remaining words</option>
+                <option value=4> Retest words</option>
+            </select>
+            <h1 id="spellingBee">Welcome</h1>
+            <button class="btn-next" id="btn-next" onclick="readAWord()">Next word</button>
+            <button class="btn-repeat" id="btn-repeat" onclick="repeatWord()"> Repeat</button>
+            <button class="btn-repeat" id="btn-add-retest" onclick="addRemoveRetest(0)">Add to Retest</button>
+            <button class="btn-repeat" id="btn-remove-retest" onclick="addRemoveRetest(-1)">Remove from Retest</button>
+            <div class="spelling-container">
+                <div>
+                    <h2>0 - 100</h2>
+                    <div id="spellingList0">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>101 - 200 </h2>
+                    <div id="spellingList1">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>201 - 300 </h2>
+                    <div id="spellingList2">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>301 - end </h2>
+                    <div id="spellingList3">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Retest </h2>
+                    <div id="spellingList4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setRetestWords();
+        printSpellingList(0);
+        printSpellingList(1);
+        printSpellingList(2);
+        printSpellingList(3);
+        printSpellingList(4);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Spelling Bee - Difficulty Two BEE</title>
+    <link rel="stylesheet" href="/4thgrade/css/style.css" />
+    <script>
+        var spellingBee = [];
+        spellingBee[0] = ["Acadians",
+"Gippsland",
+"froward",
+"ensconced",
+"cattalo or catalo",
+"hypogenous",
+"composite",
+"Miranda",
+"Newfoundland",
+"fulminate",
+"bilaterian",
+"wootz",
+"movimento",
+"mandorla",
+"pomegranate",
+"parodic",
+"osculatory",
+"orthogonal",
+"planisphere",
+"taste",
+"Shiba Inu",
+"misnomer",
+"eustress",
+"blastogenesis",
+"octuplicate",
+"in silico",
+"particulate",
+"planogram",
+"Pomeranian",
+"freegan",
+"emissary",
+"balsamic",
+"pathos",
+"polysyllabic",
+"teraphim",
+"anserine",
+"elicitation",
+"advocatory",
+"eligibility",
+"placate",
+"runcible spoon",
+"goji berry",
+"implicative",
+"sostenuto",
+"credence",
+"Farsi",
+"novemdecillion",
+"adjugate",
+"epidural",
+"patella",
+"hydrocortisone",
+"maritime",
+"debutante",
+"ramson",
+"asthmatic",
+"pilosity",
+"depreciate",
+"pierre",
+"davenport",
+"convocation",
+"recreant",
+"majuscule",
+"mondegreen",
+"creel",
+];
+        spellingBee[1] = ["Cheshire cat",
+"phishing",
+"Motrin",
+"tsk-tsked",
+"cum lau·de",
+"evo-devo",
+"lumen",
+"catalina",
+"Sumatran",
+"restitutory",
+"cholesterol",
+"astaxanthin",
+"Florentine",
+"stricture",
+"no-goodnik",
+"agnail",
+"perquisite",
+"pilotage",
+"aristarchus",
+"deprivation",
+"ante",
+"amiably",
+"normandy",
+"officinal",
+"Cassandra",
+"quinary",
+"afroth",
+"rhapsody",
+"Franciscan",
+"abaft",
+"Romano",
+"impoverish",
+"flexitarian",
+"parsimony",
+"prion",
+"ancho",
+"polyester",
+"anoint",
+"appraisal",
+"parabola",
+"primeval",
+"morphological",
+"retrodict",
+"expectorant",
+"Tasmanian",
+"hipsterism",
+"melamine",
+"equate",
+"polonium",
+"espial",
+"kung pao",
+"aglossal",
+"nodosity",
+"somniloquy",
+"antacid",
+"umbilical",
+"zacate",
+"acquit",
+"capnometer",
+"fontina",
+"biomimicry",
+"durango",
+"démodé",
+"MIDI",
+];
+        spellingBee[2] = ["pomato",
+"inerrancy",
+"Munich",
+"coalition",
+"discretionary",
+"inveterate",
+"muktuk",
+"ex libris",
+"auklet",
+"jiggery-pokery",
+"sobersides",
+"lantana",
+"atresia",
+"estancia",
+"Asgard",
+"toties quoties",
+"hetman",
+"zurna",
+"vili",
+"motherumbung",
+"serin",
+"tarlatan or tarleton",
+"tappet",
+"parr",
+"acrogeria",
+"Jumada",
+"wigan",
+"struthious",
+"parturient",
+"ben trovato",
+"Waf",
+"Hathor",
+"synanthrope",
+"in medias res",
+"cerment",
+"spathe",
+"acropachy",
+"thimerosal",
+"firkin",
+"aistopod",
+"petechia",
+"yuga",
+"furan",
+"Manu",
+"niminy-piminy",
+"philopatry",
+"Inuk",
+"copernicus",
+"homoscedasticity",
+"Beowulf",
+"chalaza",
+"asura",
+"as nas",
+"Dubuque",
+"sravaka",
+"sfax",
+"sapporo",
+"scrofula",
+"saeta",
+"Apistogramma",
+"mozo",
+"phobos",
+"glabella",
+"biltong",
+];
+        spellingBee[3] = ["bosc",
+"á fond",
+"Beaux arts",
+"tambour",
+"wabeno",
+"cushag",
+"almuerzo",
+"nisei",
+"tintinnabulary",
+"marcescent",
+"apophyge",
+"aksum",
+"katana",
+"bahrain",
+"alcarraza",
+"acharya",
+"gaur",
+"danta",
+"pierrot",
+"rabato",
+"Thomism",
+"aes rude",
+"calumet",
+"oud",
+"buñuelo",
+"guan",
+"pelerine",
+"jactance",
+"kiva",
+"scagliola",
+"savior faire",
+"eudiometer",
+"coulisse",
+"silique",
+"accordatura",
+"cavalletti",
+"chévre",
+"MOOC",
+"tessitura",
+"aesir",
+"mandragora",
+"qiyas",
+"turgor",
+"cahiers",
+"berceuse",
+"smriti or smrti",
+"furcula",
+"pampootie",
+"stygian",
+"chopine",
+"korrigan",
+"recamier",
+"fauchard",
+"espalier",
+"creances",
+"courgette",
+"Corinthian",
+"fugue",
+"estrepe",
+"zimocca",
+"Sir Roger de Coverley",
+"caprifig",
+"boniface",
+];
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="history" id="history">
+
+        </div>
+        <div class="spelling_container">
+            <div class="subpages">
+                <ul class="subpageslist">
+                    <li class="subpageslinks refresh"><a onclick="resetStorageAll()" href="javascript:void(0)">Refresh All</a></li>
+<li class="subpageslinks"><a href="/4thgrade/word.html" >Easy</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/1/">Difficulty One</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/"">Difficulty Two</a></li>
+                    <li class="subpageslinks active"><a href="/4thgrade/2/p2.html">Difficulty Two - Continue</a></li>
+                    <li class="subpageslinks active"><a>Difficulty Two - End</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/">Difficulty Three</a></li>
+                </ul>
+            </div>
+            <select id="chooseLesson" onchange="setRetestWords()">
+                <option value=0> Page 1</option>
+                <option value=1> Page 2</option>
+                <option value=2> Page 3</option>
+                <option value=3> Page 4</option>
+                <option value=4> Retest words</option>
+            </select>
+            <div class="wordContainer">
+                <span id="spellingBee" onclick="getWordDefinitions()">Welcome</span>
+            </div>
+            <div id="_definitions_">
+            </div>
+            <button class="btn-next" id="btn-next" onclick="readAWord()">Next word</button>
+            <button class="btn-repeat" id="btn-repeat" onclick="repeatWord()"> Repeat</button>
+            <button class="btn-repeat" id="btn-add-retest" onclick="addRemoveRetest(0)">Add to Retest</button>
+            <button class="btn-repeat" id="btn-remove-retest" onclick="addRemoveRetest(-1)">Remove from Retest</button>
+            <div class="remainingWords"> Remaining Words : <span class="_count_" id="_count_">Not Available</span></div>
+            <div class="spelling-container">
+                <div>
+                    <h2>Page 1</h2>
+                    <div id="spellingList0">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 2</h2>
+                    <div id="spellingList1">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 3</h2>
+                    <div id="spellingList2">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 4</h2>
+                    <div id="spellingList3">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Retest </h2>
+                    <div id="spellingList4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/4thgrade/js/main.js" ></script>
+    <script src="/4thgrade/js/app.js"></script>
+    <script>
+        setRetestWords();
+        printSpellingList(0);
+        printSpellingList(1);
+        printSpellingList(2);
+        printSpellingList(3);
+        printSpellingList(4);
+    </script>
+</body>
+
+</html>

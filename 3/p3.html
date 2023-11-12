@@ -1,0 +1,401 @@
+<!DOCTYPE>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Spelling Bee - Difficulty One BEE</title>
+    <link rel="stylesheet" href="/4thgrade/css/style.css" />
+    <script>
+        var spellingBee = [];
+        spellingBee[0] = ["halala or halalah",
+"corybantic",
+"chasuble",
+"furuncle",
+"pongee",
+"acoel",
+"acral",
+"Koine",
+"weka",
+"haplography",
+"Tchefuncte",
+"becquerel",
+"darnel",
+"giallolino",
+"krausen",
+"Castalia",
+"nahcolite",
+"telamon",
+"uraeus",
+"teledu",
+"gattine",
+"mele",
+"Marathi",
+"nuciform",
+"grandrelle",
+"bordereaux",
+"rambla",
+"tullibee",
+"guichet",
+"Guarnerius",
+"unakite",
+"azotea",
+"gegenschein",
+"hebdomadal",
+"gypsophila",
+"koh-i-noor",
+"nocive",
+"cataphora",
+"blastema",
+"trochee",
+"diapason",
+"deliquesce",
+"aperçu",
+"cioppino",
+"inglenook",
+"efflux",
+"frugivore",
+"lobscouse",
+"senecio",
+"jasmone",
+"hawok",
+"fructiferous",
+"martinoe",
+"lierre",
+"porwigle",
+"portugais",
+"ligas",
+"Osloite",
+"sciolistic",
+"seraya",
+"janthina",
+"Skeltonic",
+"balata",
+"balbriggan",
+"affeer",
+"pomology",
+"Svengali",
+"escheator",
+"dogana",
+"toorie",
+"exchequer",
+"habeas corpus",
+"kerril",
+"pudibund",
+"toril",
+
+
+        ];
+        spellingBee[1] = ["ryas",
+"terai",
+"gabarit",
+"guerite",
+"gallivat",
+"charcuterie",
+"zugzwang",
+"triskelion",
+"crokinole",
+"anicca",
+"batamote",
+"yabbies",
+"salmagundi or salmagundy",
+"hutia or jutia",
+"Deseret",
+"Djibouti",
+"Tegucigalpa",
+"Llullaillaco",
+"Pyxis",
+"Bezier Curve",
+"Beauceron",
+"ni-Vanuatu",
+"Vulcan",
+"anabathmoi",
+"selah",
+"cirri",
+"Oort cloud",
+"cobalamin",
+"amuse-gueule",
+"anent",
+"abaculus",
+"Dvorak",
+"sous vide",
+"Nethinim",
+"Rayleigh wave",
+"Gaia",
+"Ner Tamid",
+"cathect",
+"mange-tout",
+"whakapapa",
+"Astur",
+"Casimir effect",
+"Devanagari",
+"bismillah",
+"deceleron",
+"Ardipithecus",
+"Equatoguinean",
+"limaçon",
+"Kannada",
+"Bundt",
+"Strigolniki",
+"Bavarian cream",
+"hysteron proteron",
+"rooseveltite",
+"temalacatl",
+"darmstadtium",
+"Eris",
+"flehmen",
+"au bleu",
+"pou sto",
+"kapparah",
+"Kuiper Belt",
+"Quaoar",
+"agate",
+"art brut",
+"banh mi",
+"attacca",
+"Ryukyu",
+"kalopanax",
+"derring-do",
+"Alfvén",
+"virga",
+"ab aeterno",
+"Caracas",
+"indicia",
+
+
+        ];
+        spellingBee[2] = ["Huallaga",
+"kufi",
+"Novanglian",
+"una corda",
+"triduum",
+"wapiti",
+"galena",
+"gyokuro",
+"luftmensch",
+"aggrandizement",
+"battue",
+"Tok Pisin",
+"dvandva",
+"ivermectin",
+"coulrophobia",
+"ancien régime",
+"deathin",
+"zowie",
+"colocate",
+"Aglaia",
+"Apostolici",
+"ubiquinone",
+"Gurmukhi",
+"Burkinabe",
+"ciliopathy",
+"logothete",
+"grobian",
+"rond de jambe",
+"kyphoplasty",
+"Aten",
+"catjang",
+"neem",
+"amour propre",
+"Sagittarius",
+"hordeolum",
+"trous-de-loup",
+"vis-à-vis",
+"Latinxua",
+"Barnumesque",
+"medulla",
+"aughts",
+"carnitine",
+"ahuehuete",
+"hominin",
+"La Tène",
+"Gaspesian",
+"samsara",
+"Déné",
+"ubi sunt",
+"à la grecque",
+"galatea",
+"tic douloureux",
+"calusar",
+"graywacke",
+"Panchen Lama",
+"pot-au-feu",
+"rubaiyat",
+"cohosh",
+"alleluiatic",
+"ca’canny",
+"Theravada",
+"Hippolyta",
+"Anno Hegirae",
+"moissanite",
+"mässig",
+"mirach",
+"Dubhe",
+"Baucis",
+"Firbolg",
+"Panathenaea",
+"Furneaux",
+"Enoch Arden",
+"Herodotean",
+"Schedar",
+"taedium vitae",
+
+
+        ];
+        spellingBee[3] = ["Shawwal",
+"point d’appui",
+"fête champêtre",
+"pas seul",
+"roi fainéant",
+"fatshedera",
+"Bernoulli effect",
+"Ishihara test",
+"Bêche-de-mer",
+"je ne sais quoi",
+"witch of Agnesi",
+"Robigalia",
+"Bartókian",
+"Patripassianism",
+"hei-tiki",
+"Saoshyant",
+"Ahura Mazda",
+"Zdarsky tent",
+"Menaia",
+"Metonic cycle",
+"Ardhamagadhi",
+"bhikshuni",
+"svarabhakti",
+"poudre B",
+"Barylambda",
+"macushla",
+"succès fou",
+"Kitksan",
+"Apabhramsa",
+"Euroclydon",
+"Taal",
+"Cotoneaster",
+"akkum",
+"chorten",
+"cacoëthes",
+"caló",
+"alouatte",
+"tinamou",
+"acicula",
+"cacaxte",
+"aegrotat",
+"Typhoean",
+"cynocephali",
+"thuluth",
+"fellahin or fellaheen",
+"torii",
+"Nabal",
+"ahuatle",
+"Guidonian",
+"Aegilops",
+"Hsia",
+"pareidolia",
+"Mandelbrot set",
+"skerrick",
+"tusche",
+"Terre Haute",
+"Geatish",
+"Deimos",
+"carcajou",
+"pschent",
+"Esau",
+"esclandre",
+"orphéon",
+"Caerphilly",
+"Carrickmacross",
+"Quonset",
+"Prêt-à-porter",
+"lebkuchen",
+"cire perdue",
+
+
+        ];
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="history" id="history">
+
+        </div>
+        <div class="spelling_container">
+            <div class="subpages">
+                <ul class="subpageslist">
+                    <li class="subpageslinks refresh"><a onclick="resetStorageAll()" href="javascript:void(0)">Refresh All</a></li>
+<li class="subpageslinks"><a href="/4thgrade/word.html" >Easy</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/1/">Difficulty One</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/">Difficulty Two</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p2.html">Difficulty Two - Continue</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/2/p3.html">Difficulty Two - End</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/">Difficulty Three</a></li>
+                    <li class="subpageslinks"><a href="/4thgrade/3/p2.html">Difficulty Three - Continue</a></li>
+                    <li class="subpageslinks active"><a>Difficulty Two - End</a></li>
+                </ul>
+            </div>
+            <select id="chooseLesson" onchange="setRetestWords()">
+                <option value=0> Page 1</option>
+                <option value=1> Page 2</option>
+                <option value=2> Page 3</option>
+                <option value=3> Page 4</option>
+                <option value=4> Retest words</option>
+            </select>
+            <div class="wordContainer">
+                <span id="spellingBee" onclick="getWordDefinitions()">Welcome</span>
+            </div>
+            <div id="_definitions_">
+            </div>
+            <button class="btn-next" id="btn-next" onclick="readAWord()">Next word</button>
+            <button class="btn-repeat" id="btn-repeat" onclick="repeatWord()"> Repeat</button>
+            <button class="btn-repeat" id="btn-add-retest" onclick="addRemoveRetest(0)">Add to Retest</button>
+            <button class="btn-repeat" id="btn-remove-retest" onclick="addRemoveRetest(-1)">Remove from Retest</button>
+            <div class="remainingWords"> Remaining Words : <span class="_count_" id="_count_">Not Available</span></div>
+            <div class="spelling-container">
+                <div>
+                    <h2>Page 1</h2>
+                    <div id="spellingList0">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 2</h2>
+                    <div id="spellingList1">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 3</h2>
+                    <div id="spellingList2">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Page 4</h2>
+                    <div id="spellingList3">
+
+                    </div>
+                </div>
+                <div>
+                    <h2>Retest </h2>
+                    <div id="spellingList4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/4thgrade/js/main.js"></script>
+    <script src="/4thgrade/js/app.js"></script>
+    <script>
+        setRetestWords();
+        printSpellingList(0);
+        printSpellingList(1);
+        printSpellingList(2);
+        printSpellingList(3);
+        printSpellingList(4);
+    </script>
+</body>
+</html>

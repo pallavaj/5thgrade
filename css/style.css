@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.spelling_container {
+    text-align: center;
+    padding-top: 0;
+}
+
+#spellingBee {
+    font-size: 10vh;
+    color: blue;
+    cursor: pointer;
+    line-height: 1;
+}
+
+button {
+    font-size: 4vh;
+    border-radius: 5px;
+    font-family: cursive;
+    padding: 0 2vh;
+    margin: 0 2vh;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px #999;
+}
+
+button[data-disabled] {
+    background-color: grey;
+}
+
+.btn-next {
+    border-color: #04AA6D;
+    color: green;
+}
+
+.btn-next:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Blue */
+.btn-repeat {
+    border-color: #2196F3;
+    color: dodgerblue;
+}
+
+.btn-repeat:hover {
+    background: #2196F3;
+    color: white;
+}
+
+.spelling-container {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#chooseLesson {
+    font-size: 2vh;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+a.speakWord {
+    display: block;
+}
+#_definitions_{
+    text-align: justify;
+}
+#_definitions_ p{
+    cursor: pointer;
+}
+.subpageslinks.active{
+    font-size: 20px;
+    font-weight: bold;
+}
+.subpageslist{
+    list-style: none;
+}
+._count_{
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+}
+.remainingWords{
+    margin: 8px 0 0 0;
+}
+#mw_link{
+    top: -60;
+    font-size: 20px;
+    position: relative;
+}
+.wordContainer{
+    padding:30px 0;
+}
+#voiceSelect{
+    display: none;
+}
+a.resetWordList {
+    color: red;
+    text-decoration: none;
+    font-size: 120%;
+    background-color: ivory;
+    padding: 0px 4px 10px;
+    display: block;
+}
+li.subpageslinks.refresh {
+    font-size: 102%;
+    padding-bottom: 10px;
+}
+
+li.subpageslinks.refresh a {
+    border:1px solid red
+}
